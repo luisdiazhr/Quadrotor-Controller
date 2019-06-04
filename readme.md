@@ -1,12 +1,15 @@
 # Introduction
 
-The goal of this project is to implement a controller for a 3D Quadrotor. As we plan to control, a reasonable approach is to start tuning the body rates controller since they are independently controlled. The lateral position control depends on the body rates.
+The goal of this project is to implement a controller for a 3D Quadrotor. The state is determined by nine variables. From those variables, only four are independent which are the body rates and the altitude, controlled directly by the torques and collective thrust respectively. A reasonable approach is to start tuning the controllers for those and later focus on the other degrees of fredom. The validation of the controller 
 
-## Body Rate Controller
-In this step the focus is on implementing a function to control the body rates p, q, r of the quad. A small rotation speed is aplied on the roll axis of simulated quad. The purpose is to estabilize the quad attitude by keeping the roll angle to zero. This is done by experimenting with the gain KpPQR.
+## Body Rates Controller
+When implementing a controller for the quad body rates, the goal is to demonstrate that the quad rotation rate can be estabilized to zero under the effect of any rotational speed. In this case, a small rotational speed is applied to the the roll axis. This is done by tuning the gain KpPQR. As a result, the quad rates are kept to zero.
 
-## Roll/Pitch Controller
+### Roll/Pitch Controller
+Then, the next step is to control the vehicle angle. This is done by tuning the parameter kpBank.
 
 
 ## Lateral Position Controller
 
+
+## Non-idealities and robustness
