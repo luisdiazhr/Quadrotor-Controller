@@ -19,3 +19,8 @@ Position includes altitude and lateral. Altitude control involves the applicatio
 Lateral position control is achieved by using the knobs...
 
 ## Non-idealities and robustness
+In this validation scenario, the goal is to show that the controllers respond to the following non ideal conditions:
+- When the center of mass is shifted
+- When the vehicle is heavier than expected
+
+## Tracking trajectories
